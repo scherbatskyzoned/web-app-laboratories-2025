@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Film Library</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="custom.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar custom-navbar">
+    <div class="container-fluid d-flex justify-content-between align-items-center">
+      <div class="d-flex align-items-center">
+        <i class="bi bi-collection-play me-2"></i>
+        <a class="navbar-brand mb-0 h1 text-white" href="#">Film Library</a>
+      </div>
+
+      <form>
+        <input class="form-control" type="search" placeholder="Search" aria-label="Search" />
+      </form>
+
+      <i class="bi bi-person-circle text-white ms-3"></i>
+    </div>
+  </nav>
+
+  <!-- Page layout -->
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Sidebar -->
+      <div class="col-3 mt-3">
+        <div class="list-group">
+          <button class="list-group-item list-group-item-action active">All</button>
+          <button class="list-group-item list-group-item-action">Favorite</button>
+          <button class="list-group-item list-group-item-action">Best Rated</button>
+          <button class="list-group-item list-group-item-action">Seen Last Month</button>
+          <button class="list-group-item list-group-item-action">Unseen</button>
+        </div>
+      </div>
+
+      <!-- Main content -->
+      <div class="col-9 mt-3 position-relative">
+        <h2>All</h2>
+
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Favorite</th>
+              <th>Last seen</th>
+              <th>Rating</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="text-danger">Pulp Fiction</td>
+              <td><input type="checkbox" checked /></td>
+              <td>March 10, 2024</td>
+              <td>★★★★★</td>
+            </tr>
+            <tr>
+              <td class="text-danger">21 Grams</td>
+              <td><input type="checkbox" checked /></td>
+              <td>March 17, 2024</td>
+              <td>★★★☆☆</td>
+            </tr>
+            <tr>
+              <td>Star Wars</td>
+              <td><input type="checkbox" /></td>
+              <td></td>
+              <td>☆☆☆☆☆</td>
+            </tr>
+            <tr>
+              <td>Matrix</td>
+              <td><input type="checkbox" /></td>
+              <td></td>
+              <td>☆☆☆☆☆</td>
+            </tr>
+            <tr>
+              <td>Shrek</td>
+              <td><input type="checkbox" /></td>
+              <td>March 21, 2024</td>
+              <td>★★☆☆☆</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- Add new film button -->
+        <button class="btn btn-primary rounded-circle position-absolute top-0 end-0 me-2">
+          <i class="bi bi-plus"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

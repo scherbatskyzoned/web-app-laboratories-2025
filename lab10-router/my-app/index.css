@@ -1,0 +1,11 @@
+.favorite {
+  color: red;
+}
+
+input[type=checkbox]:disabled{
+  opacity: 1;
+}
+
+.custom-star {
+  color: #FF9529
+}

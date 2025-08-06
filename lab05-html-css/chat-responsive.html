@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Film Library</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="custom.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar custom-navbar">
+    <div class="container-fluid d-flex justify-content-between align-items-center">
+      
+      <!-- Toggle for sidebar on mobile -->
+      <button class="btn text-white d-lg-none" data-bs-toggle="offcanvas" data-bs-target="#sidebar">
+        <i class="bi bi-list"></i>
+      </button>
+
+      <div class="d-flex align-items-center gap-2">
+        <i class="bi bi-collection-play text-white"></i>
+        <a class="navbar-brand mb-0 h1 text-white" href="#">Film Library</a>
+      </div>
+
+      <form class="d-none d-md-block">
+        <input class="form-control" type="search" placeholder="Search" aria-label="Search" />
+      </form>
+
+      <i class="bi bi-person-circle text-white ms-3"></i>
+    </div>
+  </nav>
+
+  <div class="container-fluid">
+    <div class="row">
+
+      <!-- Sidebar as offcanvas on mobile, visible on desktop -->
+      <aside class="col-lg-3 d-none d-lg-block mt-3" id="sidebar-col">
+        <div class="list-group">
+          <button class="list-group-item list-group-item-action active">All</button>
+          <button class="list-group-item list-group-item-action">Favorite</button>
+          <button class="list-group-item list-group-item-action">Best Rated</button>
+          <button class="list-group-item list-group-item-action">Seen Last Month</button>
+          <button class="list-group-item list-group-item-action">Unseen</button>
+        </div>
+      </aside>
+
+      <!-- Offcanvas sidebar for mobile -->
+      <div class="offcanvas offcanvas-start d-lg-none" tabindex="-1" id="sidebar">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title">Filters</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <div class="list-group">
+            <button class="list-group-item list-group-item-action active">All</button>
+            <button class="list-group-item list-group-item-action">Favorite</button>
+            <button class="list-group-item list-group-item-action">Best Rated</button>
+            <button class="list-group-item list-group-item-action">Seen Last Month</button>
+            <button class="list-group-item list-group-item-action">Unseen</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main content -->
+      <main class="col-12 col-lg-9 mt-3 position-relative">
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>All</h2>
+          <button class="btn btn-primary rounded-circle">
+            <i class="bi bi-plus"></i>
+          </button>
+        </div>
+
+        <div class="table-responsive">
+          <table class="table align-middle">
+            <thead>
+              <tr>
+                <th>Title</th>
+                <th>Favorite</th>
+                <th>Last seen</th>
+                <th>Rating</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="text-danger">Pulp Fiction</td>
+                <td><input type="checkbox" checked /></td>
+                <td>March 10, 2024</td>
+                <td>★★★★★</td>
+              </tr>
+              <tr>
+                <td class="text-danger">21 Grams</td>
+                <td><input type="checkbox" checked /></td>
+                <td>March 17, 2024</td>
+                <td>★★★★☆</td>
+              </tr>
+              <tr>
+                <td>Star Wars</td>
+                <td><input type="checkbox" /></td>
+                <td></td>
+                <td>☆☆☆☆☆</td>
+              </tr>
+              <tr>
+                <td>Matrix</td>
+                <td><input type="checkbox" /></td>
+                <td></td>
+                <td>☆☆☆☆☆</td>
+              </tr>
+              <tr>
+                <td>Shrek</td>
+                <td><input type="checkbox" /></td>
+                <td>March 21, 2024</td>
+                <td>★★☆☆☆</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </main>
+
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

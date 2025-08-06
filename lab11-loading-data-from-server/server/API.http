@@ -1,0 +1,12 @@
+GET http://localhost:3001/api/films HTTP/1.1
+###
+
+## Retrieve all the films with a specified filter (in this example "unseen").
+GET http://localhost:3001/api/films?filter=unseen HTTP/1.1
+###
+
+GET http://localhost:3001/api/films?filter=best HTTP/1.1
+###
+
+GET http://localhost:3001/api/films?filter=favorite HTTP/1.1
+###
